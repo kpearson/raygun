@@ -84,7 +84,9 @@ If you invoke raygun with the ```-p``` option, you can specify your own github r
 
 The repository must:
 
-* Have been tagged. Raygun chooses the "greatest" tag and downloads the repository as of that tag.
+* Have been tagged [Git tagging]. Raygun chooses the "greatest" tag and downloads the repository as of that tag.
+* Be named app_prototype throughout the application. This is so Raygun's search and replace knows what to rename.
+* Include a ```.ruby_version``` file.
 * Not have any binary files. Raygun runs a 'sed' command on all files, which will fail on binaries, such as jar files.
 
 If your project template requires a minimum version of raygun, include the version in a file called
@@ -116,3 +118,4 @@ Generate an example app using your local development version of raygun:
 ## Changes
 
 [View the Change Log](https://github.com/carbonfive/raygun/tree/master/CHANGES.md)
+[Git tagging](https://git-scm.com/book/en/v2/Git-Basics-Tagging)
